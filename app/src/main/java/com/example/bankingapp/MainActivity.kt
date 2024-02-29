@@ -19,6 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.bankingapp.components.BottomNavigationBar
+import com.example.bankingapp.components.CardSection
+import com.example.bankingapp.components.CurrenciesSection
+import com.example.bankingapp.components.FinanceSection
 import com.example.bankingapp.components.TopBarSection
 import com.example.bankingapp.ui.theme.BankingAppTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -49,6 +52,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
@@ -64,10 +68,10 @@ fun HomeScreen() {
                 .padding(padding)
         ) {
         TopBarSection()
-//        CardSection()
+        CardSection()
             Spacer(modifier = Modifier.height(16.dp))
-//        FinanceSection()
-//        CurrenciesSection()
+          FinanceSection()
+        CurrenciesSection()
         }
     }
 }
